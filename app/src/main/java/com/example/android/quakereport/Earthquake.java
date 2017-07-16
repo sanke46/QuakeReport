@@ -5,18 +5,22 @@ package com.example.android.quakereport;
  */
 
 public class Earthquake {
-    private String mMagnitube;
+    private double mMagnitube;
     private String mLocation;
-    private String mDate;
+    private long timeInMillisecond;
+    private String mUrl;
 
-    public Earthquake(String mMagnitube, String mLocation, String mDate) {
+    public Earthquake(double mMagnitube, String mLocation, long timeInMilliseconds, String mUrl) {
         this.mMagnitube = mMagnitube;
         this.mLocation = mLocation;
-        this.mDate = mDate;
+        this.timeInMillisecond = timeInMilliseconds;
+        this.mUrl = mUrl;
     }
 
+
+
     //setters
-    public void setmMagnitube(String mMagnitube) {
+    public void setmMagnitube(double mMagnitube) {
         this.mMagnitube = mMagnitube;
     }
 
@@ -24,12 +28,16 @@ public class Earthquake {
         this.mLocation = mLocation;
     }
 
-    public void setmDate(String mDate) {
-        this.mDate = mDate;
+    public void setTimeInMillisecond(long timeInMillisecond) {
+        this.timeInMillisecond = timeInMillisecond;
+    }
+
+    public void setmUrl(String mUrl) {
+        this.mUrl = mUrl;
     }
 
     //getters
-    public String getmMagnitube() {
+    public double getmMagnitube() {
         return mMagnitube;
     }
 
@@ -37,7 +45,11 @@ public class Earthquake {
         return mLocation;
     }
 
-    public String getmDate() {
-        return mDate;
+    public long getTimeInMillisecond() {
+        return timeInMillisecond;
+    }
+
+    public String getmUrl() {
+        return mUrl;
     }
 }
